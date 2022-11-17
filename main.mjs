@@ -26,6 +26,7 @@ app.get('/check-electricity', async(request, reply) => {
 })
 
 console.log('http://localhost:3001/check-electricity')
+const PORT = process.env.PORT || 3000
 app.listen({
-  port: 80,
+  port: PORT,
 })
