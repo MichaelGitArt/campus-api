@@ -1,0 +1,21 @@
+{
+  "name": "ip-check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./main.mjs",
+    "dev": "node ./main.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^4.10.0",
+    "ping": "^0.4.2"
+  },
+  "devDependencies": {
+    "@gitart/eslint-config-basic": "^0.2.3",
+    "eslint": "^8.27.0"
+  }
+}
