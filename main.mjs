@@ -27,5 +27,5 @@ app.get('/check-electricity', async(request, reply) => {
 
 console.log('http://localhost:3001/check-electricity')
 app.listen({
-  port: 3001,
+  port: 80,
 })
