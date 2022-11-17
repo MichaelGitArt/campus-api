@@ -1,6 +1,6 @@
-import fastify from 'fastify'
-import ping from 'ping'
-import cors from '@fastify/cors'
+const fastify = require('fastify')
+const ping = require('ping')
+const cors = require('@fastify/cors')
 
 const app = fastify()
 
@@ -25,8 +25,14 @@ app.get('/check-electricity', async(request, reply) => {
   }
 })
 
-console.log('http://localhost:3001/check-electricity')
 const PORT = process.env.PORT || 3000
 app.listen({
   port: PORT,
+}, (err, address) => {
+  console.warn(`Server listening on ${address}`)
+  console.warn('Port: ', PORT)
+  if (err) {
+    fastify.log.error(err)
+    process.exit(1)
+  }
 })
